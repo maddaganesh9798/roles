@@ -1,0 +1,6 @@
+- name: backend configuration
+  hosts: backend
+  become: yes
+  tasks:
+  - name: start the survice
+    ansible.builtin.command: systemctl enable backend
