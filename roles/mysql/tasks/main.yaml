@@ -1,5 +1,4 @@
-tasks:
-  - name: ansible to install pymysql
+- name: ansible to install pymysql
     ansible.builtin.pip:
       name:
       - PyMySQL
