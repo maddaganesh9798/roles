@@ -4,3 +4,5 @@
   tasks:
   - name: start the survice
     ansible.builtin.command: systemctl enable backend
+   - name: start the survice
+    ansible.builtin.command: systemctl start backend
