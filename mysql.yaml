@@ -1,4 +1,4 @@
-- name: conifigure mysql surver
+- name: mysql configuration
   hosts: mysql
   become: yes
   roles:
