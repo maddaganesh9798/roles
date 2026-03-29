@@ -1,8 +1,10 @@
-- name: backend configuration
+- name: restart surver
   hosts: backend
   become: yes
   tasks:
-  # - name: start the survice
-  #   ansible.builtin.command: systemctl enable backend
-   - name: start the survice
-    ansible.builtin.command: systemctl start backend
+  - name: daemon reload
+    ansible.builtin.systemd_service:
+      daemon_reload: true
+      state: restarted
+      name: backend
+ 
